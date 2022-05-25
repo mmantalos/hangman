@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="100.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="14.0" layoutY="14.0" prefHeight="16.0" prefWidth="128.0" text="6 letter words: " />
+      <Label layoutX="14.0" layoutY="42.0" prefHeight="16.0" prefWidth="128.0" text="7 - 9 letter words:" />
+      <Label layoutX="14.0" layoutY="70.0" prefHeight="16.0" prefWidth="128.0" text="10+ letter words:" />
+      <Label fx:id="PercentSix" layoutX="158.0" layoutY="14.0" prefHeight="16.0" prefWidth="128.0" />
+      <Label fx:id="PercentSevenNine" layoutX="158.0" layoutY="42.0" prefHeight="16.0" prefWidth="128.0" />
+      <Label fx:id="PercentTenMore" layoutX="157.0" layoutY="70.0" prefHeight="16.0" prefWidth="128.0" />
+   </children>
+</Pane>

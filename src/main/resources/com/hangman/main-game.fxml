@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<Pane minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.hangman.GameController">
+   <children>
+      <MenuBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="28.0" prefWidth="700.0">
+        <menus>
+          <Menu fx:id="ApplicationMenu" mnemonicParsing="false" text="Application">
+               <items>
+                  <MenuItem fx:id="StartBtn" mnemonicParsing="false" onAction="#Start" text="Start" />
+                  <MenuItem fx:id="LoadMenuBtn" mnemonicParsing="false" onAction="#LoadMenu" text="Load" />
+                  <MenuItem fx:id="CreateMenuBtn" mnemonicParsing="false" onAction="#CreateMenu" text="Create" />
+                  <MenuItem fx:id="ExitBtn" mnemonicParsing="false" onAction="#Exit" text="Exit" />
+               </items>
+          </Menu>
+          <Menu fx:id="DetailsMenu" mnemonicParsing="false" text="Details">
+            <items>
+              <MenuItem fx:id="DictionaryBtn" mnemonicParsing="false" onAction="#DictionaryStats" text="Dictionary" />
+                  <MenuItem fx:id="RoundsBtn" mnemonicParsing="false" onAction="#Rounds" text="Rounds" />
+                  <MenuItem fx:id="SolutionBtn" mnemonicParsing="false" onAction="#Reveal" text="Solution" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label fx:id="AvailableWords" layoutX="14.0" layoutY="28.0" prefHeight="28.0" prefWidth="180.0" />
+      <Label fx:id="TotalScore" layoutX="260.0" layoutY="28.0" prefHeight="28.0" prefWidth="180.0" />
+      <Label fx:id="SuccessPercent" layoutX="506.0" layoutY="28.0" prefHeight="28.0" prefWidth="180.0" />
+      <Line endX="700.0" endY="-1.52587890625E-5" layoutY="444.0" startX="2.71735757451097E-6" startY="-1.52587890625E-5" />
+      <Line endX="412.0" endY="-1.52587890625E-5" layoutX="288.0" layoutY="56.0" startX="-288.0000305175781" startY="-1.52587890625E-5" />
+      <Line endX="-100.0" endY="252.49996948242188" layoutX="450.0" layoutY="191.0" startX="-100.00006103515625" startY="-135.00001525878906" />
+      <Label layoutX="14.0" layoutY="458.0" prefHeight="28.0" prefWidth="60.0" text="Position:" />
+      <Label layoutX="144.0" layoutY="458.0" prefHeight="28.0" prefWidth="50.0" text="Letter:" />
+      <TextField fx:id="PositionField" layoutX="74.0" layoutY="458.0" prefHeight="28.0" prefWidth="50.0" />
+      <TextField fx:id="LetterField" layoutX="194.0" layoutY="458.0" prefHeight="28.0" prefWidth="50.0" />
+      <Button fx:id="GuessBtn" layoutX="300.0" layoutY="458.0" mnemonicParsing="false" onAction="#Guess" prefHeight="28.0" prefWidth="100.0" text="GUESS" />
+      <Label fx:id="GuessLabel" contentDisplay="CENTER" layoutX="20.0" layoutY="380.0" prefHeight="50.0" prefWidth="310.0" textAlignment="CENTER">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="ImageView" fitHeight="310.0" fitWidth="310.0" layoutX="20.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true" />
+      <TableView fx:id="ProbabilityTable" layoutX="350.0" layoutY="56.0" prefHeight="388.0" prefWidth="350.0" />
+   </children>
+</Pane>
